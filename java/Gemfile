@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+
+# Added at 2018-09-04 13:31:44 -0700 by ssangervasi:
+gem "rspec", "~> 3.8", :groups => [:development, :test]
