@@ -26,13 +26,6 @@ Metrics/MethodLength:
 RSpec/NestedGroups:
   Max: 4
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: not_to, to_not
-RSpec/NotToNot:
-  Exclude:
-    - 'spec/java_spec.rb'
 
 # Offense count: 2
 # Configuration parameters: .
@@ -46,9 +39,3 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'lib/java.rb'
-
-# Offense count: 2
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 86

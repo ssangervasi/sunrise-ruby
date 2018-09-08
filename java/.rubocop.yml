@@ -1,2 +1,9 @@
 require: rubocop-rspec
 inherit_from: .rubocop_todo.yml
+
+
+Metrics/LineLength:
+    Max: 90
+
+RSpec/NotToNot:
+  EnforcedStyle: to_not
