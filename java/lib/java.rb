@@ -27,12 +27,27 @@ module Java
 
   # Pure evil: intercepting private is necessary to support static.
   def private(*args)
-    return super if args.length > 1
-    return super if args.length.zero?
+    _do_evil(
+      args,
+      intercept: ->(method_name) { singleton_class.send(:private, method_name) },
+      ignore: proc { super }
+    )
+  end
+
+  # Pure evil: intercepting private is necessary to support static.
+  def public(*args)
+    _do_evil(
+      args,
+      intercept: ->(method_name) { singleton_class.send(:public, method_name) },
+      ignore: proc { super }
+    )
+  end
+
+  def _do_evil(args, intercept:, ignore:)
     method_name = args.first
-    return super if method_defined?(method_name)
-    # Try hitting the class method in case .static was used.
-    self.class.send(:private, method_name)
+    should_ignore = args.length > 1 || args.length.zero? || method_defined?(method_name)
+    return ignore.call(method_name) if should_ignore
+    intercept.call(method_name)
   end
 
   def static(method_name)
