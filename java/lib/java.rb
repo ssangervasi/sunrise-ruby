@@ -53,7 +53,7 @@ module Java
   def static(method_name)
     method_name.tap do
       original_method = instance_method(method_name)
-      super_evil_hack_subclass = Class.new(self)
+      super_evil_hack_subclass = Class.new(self) { def initialize; end }
       singleton_class.define_method(method_name) do |*args, &block|
         original_method.bind(super_evil_hack_subclass.new).call(*args, &block)
       end
