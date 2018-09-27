@@ -22,8 +22,8 @@ class Cow
     "Cow { name: #{name}, weight: #{weight}}"
   end
 
-  # public void def eat(food_weight)
-  public def eat(food_weight)
+  # public def eat(food_weight)
+  public void def eat(food_weight)
     chew(food_weight)
     # Normally this returns the result of the assignment.
     @weight += food_weight
@@ -33,3 +33,8 @@ class Cow
     puts((['Om'] + (['nom…'] * food_weight)).join(' '))
   end
 end
+
+# $ cd ~/workspace/sunrise-ruby/java
+# $ pry -r ./demo.rb
+# pry> show-source Cow
+# pry> Cow.main

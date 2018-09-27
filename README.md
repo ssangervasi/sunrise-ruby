@@ -1,6 +1,8 @@
 # Sunrise Ruby
 
-## [The Sunrise Ruby][wiki-sunrise-ruby]
+## [A review of Access Modifiers][access_modifiers]
+
+## [The Sunrise Ruby][wiki-sunrise_ruby]
 
 ```
 In the early morning hour,
@@ -38,4 +40,5 @@ will eventually open a window
 and look out to see who's there.
 ```
 
-[wiki-sunrise-ruby]: https://en.wikipedia.org/wiki/Sunrise_Ruby
+[access_modifiers]: ./access_modifiers/index.md
+[wiki-sunrise_ruby]: https://en.wikipedia.org/wiki/Sunrise_Ruby

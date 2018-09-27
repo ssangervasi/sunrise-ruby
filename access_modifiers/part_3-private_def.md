@@ -68,7 +68,6 @@ end
 * Elevating a method to public requires 1-line diff.
 * Looks like Java
 
-
 ## Cons
 
 * Public methods get burried. (E.g. `#body_mass_index`)
@@ -79,7 +78,8 @@ end
 
 ## Lesser known facts
 
-* It's possible to do the alternate version which resembles `attr_reader`.
-* Alternate version only works if you put it at the *bottom*
-* You can pass strings if you're a big fan of quotes.
+* This works becuase `def` was updated to return the name of the new method as a symbol.
+* `private` is still just a method call.
+* May be possible to stack with other "decorators".
+* Other decorators have to be written between `private` and `def` because `private` returns `self` instead of the method name.
 

@@ -54,7 +54,7 @@ class Horse
     NEIGH
   end
 
-  def this_is_secretly_unused
+  def this_method_has_a_really_long_name(and_takes:, a_lot: 99, of_arguments: {})
     53.times { neigh }
   end
 end
@@ -64,11 +64,11 @@ end
 ## Pros
 
 * Easy to find public methods
-* Less "noise" because `private` only appears once
-* Easy to elevate a method to the public section with a single copy/paste
+* Less "noisy" because `private` only appears once
 
 ## Cons
 
+* Elevating a method to the public section requires copy/paste -> big git diff
 * Creates distance between public interface and implementation (e.g. `#build_racing_profile`)
 * For long classes it's possible to lose track of which section a method is in.
 * Raises debates over whether there should be additional indentation.

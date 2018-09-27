@@ -47,6 +47,7 @@ module Java
     method_name = args.first
     should_ignore = args.length > 1 || args.length.zero? || method_defined?(method_name)
     return ignore.call(method_name) if should_ignore
+
     intercept.call(method_name)
   end
 
