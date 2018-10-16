@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reminders</h1>
+
+<% if @reminders.blank? %>
+  <strong>None!</strong>
+<% else %>
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Alarm at</th>
+	      <th colspan="3"></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @reminders.each do |reminder| %>
+	      <tr>
+	        <td><%= reminder.alarm_at %></td>
+	        <td><%= link_to 'Show', reminder %></td>
+	        <td><%= link_to 'Edit', edit_reminder_path(reminder) %></td>
+	        <td><%= link_to 'Destroy', reminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+<% end %>
+
+<br>
+
+<br>
+
+<%= link_to 'Index', reminders_path %>
+<%= link_to 'New Reminder', new_reminder_path %>

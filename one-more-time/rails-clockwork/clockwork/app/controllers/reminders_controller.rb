@@ -7,6 +7,12 @@ class RemindersController < ApplicationController
     @reminders = Reminder.all
   end
 
+  # GET /reminders/todays
+  # GET /reminders/todays.json
+  def todays
+    @reminders = ReminderFinder.new.todays_reminders
+  end
+
   # GET /reminders/1
   # GET /reminders/1.json
   def show

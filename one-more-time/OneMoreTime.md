@@ -1,3 +1,31 @@
+# What does my computer do?
+
+
+```
+$ man date
+
+The following environment variables affect the execution of date:
+
+TZ      The timezone to use when displaying dates.  The normal format is a pathname relative to /usr/share/zoneinfo.  For
+        example, the command ``TZ=America/Los_Angeles date'' displays the current time in California.  See environ(7) for
+        more information.
+
+$ date
+Tue Oct 16 09:19:32 PDT 2018
+
+$ TZ=America/New_York date
+Tue Oct 16 12:19:33 EDT 2018
+```
+
+# What does Ruby do?
+
+[When to use DateTime](https://ruby-doc.org/stdlib-2.5.1/libdoc/date/rdoc/DateTime.html#class-DateTime-label-When+should+you+use+DateTime+and+when+should+you+use+Time-3F)
+
+> So when should you use DateTime in Ruby and when should you use Time? Almost certainly you'll want to use Time since your app is probably dealing with current dates and times. However, if you need to deal with dates and times in a historical context you'll want to use DateTime to avoid making the same mistakes as UNESCO.
+> **If you also have to deal with timezones then best of luck** - just bear in mind that you'll probably be dealing with local solar times, since it wasn't until the 19th century that the introduction of the railways necessitated the need for Standard Time and eventually timezones.
+
+
+# What does Rails do?
 
 # Joaks
 
