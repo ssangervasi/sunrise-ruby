@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+
+gem "concurrent-ruby", "~> 1.1"
+
+gem "excon", "~> 0.62.0"
+
+gem "benchmark-ips", "~> 2.7"

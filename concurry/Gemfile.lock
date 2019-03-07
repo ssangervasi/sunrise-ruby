@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    benchmark-ips (2.7.2)
+    concurrent-ruby (1.1.4)
+    excon (0.62.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  benchmark-ips (~> 2.7)
+  concurrent-ruby (~> 1.1)
+  excon (~> 0.62.0)
+
+BUNDLED WITH
+   1.17.2
