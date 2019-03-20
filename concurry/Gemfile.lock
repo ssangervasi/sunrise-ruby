@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     benchmark-ips (2.7.2)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.5)
     excon (0.62.0)
 
 PLATFORMS
@@ -14,4 +14,4 @@ DEPENDENCIES
   excon (~> 0.62.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
